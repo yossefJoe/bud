@@ -73,7 +73,6 @@ class OnboardingItem extends StatelessWidget {
           child: HintMediumText(
             label: item.description,
             fontSize: 14,
-            height: 1.5,
             labelColor: Colors.grey.shade400,
             textAlign: TextAlign.center,
           ),)
