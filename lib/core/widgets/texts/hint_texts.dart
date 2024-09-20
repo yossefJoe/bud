@@ -93,7 +93,7 @@ class HintSemiBoldText extends StatelessWidget {
   final Color? labelColor;
   final double? fontSize;
 
-  HintSemiBoldText({
+  const HintSemiBoldText({
     Key? key,
     required this.label,
     this.textAlign = TextAlign.start,
