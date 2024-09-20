@@ -5,7 +5,7 @@ import 'dart:ui';
 class AppColors {
   static const Color primaryDark = Color(0xff000000);
   static const Color blackLightText = Color(0xff2A2A2A);
-  static const Color primaryColor = Color(0xff5FC1CF);
+  static const Color primaryColor = Color(0xff6737CB);
   static const Color redCard = Color(0xffFB644D);
   static const Color pendingColor = Color(0xffFFC200);
   static const Color approvedColor = Color(0xff31D0AA);

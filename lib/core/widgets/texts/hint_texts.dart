@@ -24,7 +24,7 @@ class HintBoldText extends StatelessWidget {
       label,
       textAlign: textAlign,
       style: labelStyle ??
-          TextStyles.font18Black700Weight.copyWith(fontSize: fontSize ?? 16, color: labelColor, fontWeight: FontWeight.bold),
+          TextStyles.font16CustomGray500Weight.copyWith(fontSize: fontSize ?? 16, color: labelColor, fontWeight: FontWeight.bold),
     );
   }
 }
@@ -51,7 +51,7 @@ class HintRegularText extends StatelessWidget {
       label,
       textAlign: textAlign,
       style: labelStyle ??
-          TextStyles.font18Black700Weight.copyWith(fontSize: fontSize ?? 14, color: labelColor),
+          TextStyles.font16CustomGray500Weight.copyWith(fontSize: fontSize ?? 14, color: labelColor),
     );
   }
 }
@@ -62,12 +62,14 @@ class HintMediumText extends StatelessWidget {
   final TextStyle? style;
   final Color? labelColor;
   final double? fontSize;
+  final double? height;
 
   HintMediumText({
     Key? key,
     required this.label,
     this.textAlign = TextAlign.start,
     this.style,
+    this.height,
     this.labelColor,
     this.fontSize,
   }) : super(key: key);
@@ -76,9 +78,10 @@ class HintMediumText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       label,
+
       textAlign: textAlign,
       style: style ??
-          TextStyles.font18Black700Weight.copyWith(fontSize: fontSize ?? 16, color: labelColor),
+          TextStyles.font16CustomGray500Weight.copyWith(fontSize: fontSize ?? 16, height: height,color: labelColor),
     );
   }
 }
@@ -105,7 +108,7 @@ class HintSemiBoldText extends StatelessWidget {
       label,
       textAlign: textAlign,
       style: style ??
-          TextStyles.font18Black700Weight.copyWith(fontSize: fontSize ?? 16, color: labelColor),
+          TextStyles.font16CustomGray500Weight.copyWith(fontSize: fontSize ?? 16, color: labelColor),
     );
   }
 }

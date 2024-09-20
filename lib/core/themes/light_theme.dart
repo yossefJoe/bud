@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../resources/colors/color.dart';
 import 'colors.dart';
 import 'fonts.dart';
 
@@ -149,19 +150,19 @@ final lightTheme = ThemeData(
     ),
     headlineSmall: TextStyle(
       fontSize: 14.0,
-      color: AppColors.primaryColor,
+      color: primaryColor,
       fontFamily: Fonts.regular,
       fontWeight: FontWeight.w400,
     ),
     headlineMedium: TextStyle(
       fontSize: 16.0,
-      color: AppColors.primaryColor,
+      color: primaryColor,
       fontFamily: Fonts.medium,
       fontWeight: FontWeight.w500,
     ),
     headlineLarge: TextStyle(
       fontSize: 18.0,
-      color: AppColors.primaryColor,
+      color: primaryColor,
       fontFamily: Fonts.bold,
       fontWeight: FontWeight.w600,
     ),

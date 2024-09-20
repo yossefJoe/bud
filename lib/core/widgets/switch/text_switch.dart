@@ -1,4 +1,5 @@
 import '../../resources/colors/color.dart';
+import '../../themes/colors.dart';
 import '../texts/black_texts.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -23,7 +24,7 @@ class TextSwitch extends StatelessWidget {
         ),
         CupertinoSwitch(
           value: isActive,
-          activeColor: primaryColor,
+          activeColor: AppColors.primaryColor,
           trackColor: greyColor,
           onChanged: (value) {
             isActive = value;

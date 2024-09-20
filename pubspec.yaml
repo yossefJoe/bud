@@ -114,6 +114,8 @@ dependencies:
   qr_flutter: ^4.1.0
   flutter_staggered_grid_view: ^0.7.0
   slider_button: ^2.1.0
+  easy_localization: ^3.0.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -137,8 +139,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
+    - assets/translation/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -166,35 +170,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  assets:
-    - lib/
-    - lib/core/
-    - lib/core/utils/
-    - lib/core/helper/
-    - lib/core/themes/
-    - lib/core/routing/
-    - lib/core/widgets/
-    - lib/core/widgets/icons/
-    - lib/core/widgets/radio/
-    - lib/core/widgets/texts/
-    - lib/core/widgets/images/
-    - lib/core/widgets/switch/
-    - lib/core/widgets/buttons/
-    - lib/core/widgets/dialogs/
-    - lib/core/widgets/sliders/
-    - lib/core/widgets/tabview/
-    - lib/core/widgets/checkbox/
-    - lib/core/widgets/scaffold/
-    - lib/core/widgets/drop_down/
-    - lib/core/widgets/animations/
-    - lib/core/widgets/text-field/
-    - lib/core/widgets/buttom_sheet/
-    - lib/core/widgets/swipe_button/
-    - lib/core/resources/
-    - lib/core/resources/fonts/
-    - lib/core/resources/colors/
-    - lib/core/resources/images/
-    - lib/core/resources/styles/
-    - lib/core/decorations/
-    - lib/core/notifications/
 

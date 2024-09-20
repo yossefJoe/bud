@@ -43,11 +43,11 @@ class TextStyles{
       fontWeight: FontWeight.w500,
       color: Colors.black
   );
-  static TextStyle font16CustomGray500Weight = const TextStyle(
+  static TextStyle font16CustomGray500Weight =  TextStyle(
       fontFamily: AppFonts.Roboto,
       fontSize: 16,
       fontWeight: FontWeight.w500,
-      color: customGray
+      color: Colors.grey.shade200
   );
 
 
