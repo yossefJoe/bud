@@ -32,7 +32,7 @@ final supportedLocales = <Locale>[
   const Locale('ar'),
 ];
 
-//ppppp
+//pppppppppppppppppp
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
