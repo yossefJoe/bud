@@ -10,6 +10,15 @@ abstract class  LocaleKeys {
   static const skip = 'skip';
   static const next = 'next';
   static const getStarted = 'getStarted';
+  static const signin = 'signin';
+  static const welcomeback = 'welcomeback';
+  static const siginwithphoneandpassword = 'siginwithphoneandpassword';
+  static const enteryourphonenumber = 'enteryourphonenumber';
+  static const enteryourpassword = 'enteryourpassword';
+  static const rememberme = 'rememberme';
+  static const forgotpassword = 'forgotpassword';
+  static const donthavaeanaccount = 'donthavaeanaccount';
+  static const signup = 'signup';
   static const en = 'en';
   static const ar = 'ar';
   static const changeLanguage = 'changeLanguage';

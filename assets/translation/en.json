@@ -11,5 +11,15 @@
   "title3": "Buy, Care, and Love Pets",
   "skip": "Skip",
   "getStarted": "Get Started",
-  "next": "Next"
+  "next": "Next",
+  "signin":"SignIn",
+  "welcomeback":"Welcome Back",
+  "siginwithphoneandpassword":"Sign in with phone and password or continue with social media",
+  "enteryourphonenumber":"Enter your phone number",
+  "enteryourpassword":"Enter your password",
+  "rememberme":"Remember me",
+  "forgotpassword":"Forgot Password",
+  "donthavaeanaccount":"Don't have an account?",
+  "signup":"Sign Up"
+
 }

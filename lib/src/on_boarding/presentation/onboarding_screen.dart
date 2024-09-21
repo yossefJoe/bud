@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:bud/core/helper/extensions.dart';
@@ -20,51 +19,51 @@ import '../widgets/onboarding_item.dart';
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({Key? key}) : super(key: key);
 
-  PageController? controller = PageController(initialPage: 0, viewportFraction: 1.0);
+  PageController? controller =
+      PageController(initialPage: 0, viewportFraction: 1.0);
   int index = 0;
   StreamController<int> pageStream = StreamController<int>();
   @override
   Widget build(BuildContext context) {
-    return
-      Scaffold(
-        body:  Padding(
-          padding: 20.paddingAll,
-          child: Stack(
-            children: [
-              PageView.builder(
-                controller: controller,
-                reverse: false,
-                itemCount: BackgroundImages.data(context).length,
-                onPageChanged: (index) {
-                  pageStream.add(index);
-                },
-                itemBuilder: (context, index) {
-                  return OnboardingItem(
-                    item: BackgroundImages.data(context)[index],
-                  );
-                },
-              ),
-
-            ],
-          ),
+    return Scaffold(
+      body: Padding(
+        padding: 20.paddingAll,
+        child: Stack(
+          children: [
+            PageView.builder(
+              controller: controller,
+              reverse: false,
+              itemCount: BackgroundImages.data(context).length,
+              onPageChanged: (index) {
+                pageStream.add(index);
+              },
+              itemBuilder: (context, index) {
+                return OnboardingItem(
+                  item: BackgroundImages.data(context)[index],
+                );
+              },
+            ),
+          ],
         ),
-        floatingActionButton:floatingActionButton(context) ,
-      );
+      ),
+      floatingActionButton: floatingActionButton(context),
+    );
   }
 
   Widget floatingActionButton(BuildContext context) {
     return Padding(
-      padding: 40.paddingBottom+30.paddingStart,
+      padding: 40.paddingBottom + 30.paddingStart,
       child: Stack(
         alignment: AlignmentDirectional.bottomStart,
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment:   CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               StreamBuilder<int>(
                 initialData: 0,
-                stream: pageStream.stream,  // Listen to the stream for page changes
+                stream:
+                    pageStream.stream, // Listen to the stream for page changes
                 builder: (context, snapshot) {
                   final currentPage = snapshot.data ?? 0;
                   return Column(
@@ -77,7 +76,7 @@ class OnBoardingScreen extends StatelessWidget {
                           activeIndex: currentPage,
                           count: BackgroundImages.data(context).length,
                           textDirection: TextDirection.ltr,
-                          effect:  ExpandingDotsEffect(
+                          effect: ExpandingDotsEffect(
                             dotHeight: 10,
                             dotWidth: 10,
                             dotColor: AppColors.greyColor.withOpacity(0.3),
@@ -94,9 +93,10 @@ class OnBoardingScreen extends StatelessWidget {
                           margin: 30.paddingVert,
                           onPressed: () {
                             if (controller?.hasClients ?? false) {
-                              if (currentPage == BackgroundImages.data(context).length - 1) {
+                              if (currentPage ==
+                                  BackgroundImages.data(context).length - 1) {
                                 // pushNamedAndRemoveUntil(Routes.loginPage);
-                                // HelperMethods.setFirstTime();
+                                HelperMethods.setFirstTime();
                               } else {
                                 controller?.animateToPage(
                                   currentPage + 1,
