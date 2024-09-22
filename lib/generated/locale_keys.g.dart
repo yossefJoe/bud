@@ -15,10 +15,16 @@ abstract class  LocaleKeys {
   static const siginwithphoneandpassword = 'siginwithphoneandpassword';
   static const enteryourphonenumber = 'enteryourphonenumber';
   static const enteryourpassword = 'enteryourpassword';
+  static const enteryouremail = 'enteryouremail';
   static const rememberme = 'rememberme';
   static const forgotpassword = 'forgotpassword';
   static const donthavaeanaccount = 'donthavaeanaccount';
   static const signup = 'signup';
+  static const wewillsendyouthenewpassowrd = 'wewillsendyouthenewpassowrd';
+  static const pleaseenteryouremail = 'pleaseenteryouremail';
+  static const send = 'send';
+  static const newpasswordsuccessfullysentcheckyourinbox = 'newpasswordsuccessfullysentcheckyourinbox';
+  static const failedtosendnewpassword = 'failedtosendnewpassword';
   static const en = 'en';
   static const ar = 'ar';
   static const changeLanguage = 'changeLanguage';

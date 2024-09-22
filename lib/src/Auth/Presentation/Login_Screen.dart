@@ -2,8 +2,10 @@ import 'package:bud/core/helper/extensions.dart';
 import 'package:bud/core/resources/colors/color.dart';
 import 'package:bud/core/resources/images/app_icons.dart';
 import 'package:bud/core/resources/styles/styles.dart';
+import 'package:bud/core/routing/routes.dart';
 import 'package:bud/core/widgets/buttons/app_circular_icon_button.dart';
 import 'package:bud/core/widgets/buttons/custom_button.dart';
+import 'package:bud/core/widgets/buttons/label_button.dart';
 import 'package:bud/core/widgets/checkbox/custom_checkbox.dart';
 import 'package:bud/core/widgets/scaffold/common_appbar.dart';
 import 'package:bud/core/widgets/text-field/custom_text_field.dart';
@@ -22,7 +24,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  GlobalKey<FormFieldState> from_global_key = GlobalKey<FormFieldState>();
+  GlobalKey<FormState> fromglobalkey = GlobalKey<FormState>();
   TextStyle hintstyle =
       TextStyles.font18CustomGray600Weight.copyWith(color: Colors.grey[350]);
   @override
@@ -37,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Padding(
             padding: 20.paddingHorizontal + 20.paddingVert,
             child: Form(
-              key: from_global_key,
+              key: fromglobalkey,
               child: Column(
                 children: [
                   PrimaryBoldText(
@@ -76,8 +78,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       CustomCheckbox(
                         title: LocaleKeys.rememberme.tr(),
                       ),
-                      PrimaryRegularText(
-                        label: LocaleKeys.forgotpassword.tr(),
+                      GestureDetector(
+                        onTap: () {
+                          context.pushNamed(Routes.forgotpassword);
+                        },
+                        child: PrimaryRegularText(
+                          labelStyle: TextStyles.font16Black500Weight
+                              .copyWith(decoration: TextDecoration.underline),
+                          label: LocaleKeys.forgotpassword.tr(),
+                        ),
                       )
                     ],
                   ),
@@ -86,7 +95,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: 20.h,
                       buttonText: LocaleKeys.signin.tr(),
                       buttonColor: primaryColor,
-                      buttonFunc: () {},
+                      buttonFunc: () {
+                        if (fromglobalkey.currentState!.validate()) {
+                          print('valid');
+                        } else {
+                          print('not valid');
+                        }
+                      },
                       buttonWidth: 400.w,
                       buttonTextColor: whiteColor),
                   10.height,
@@ -95,16 +110,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     backgroundColor: grayScaleColor,
                   ),
                   20.height,
-                  RichText(
-                      text: TextSpan(
-                          style: TextStyles.font16Black500Weight,
-                          children: [
-                        TextSpan(text: LocaleKeys.donthavaeanaccount.tr()),
-                        TextSpan(text: ' '),
-                        TextSpan(
-                            style: TextStyle(color: primaryColor),
-                            text: LocaleKeys.signup.tr())
-                      ]))
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      PrimaryRegularText(
+                        label: LocaleKeys.donthavaeanaccount.tr(),
+                      ),
+                      5.width,
+                      LabelButton(
+                        onTap: () {},
+                        style: TextStyles.font16Black500Weight
+                            .copyWith(color: primaryColor),
+                        title: LocaleKeys.signup.tr(),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),

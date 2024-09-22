@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bud/core/helper/extensions.dart';
 import 'package:bud/core/resources/colors/color.dart';
+import 'package:bud/core/routing/routes.dart';
 import 'package:bud/core/widgets/texts/hint_texts.dart';
 import 'package:easy_localization/easy_localization.dart' as tr;
 import 'package:flutter/cupertino.dart';
@@ -95,7 +96,10 @@ class OnBoardingScreen extends StatelessWidget {
                             if (controller?.hasClients ?? false) {
                               if (currentPage ==
                                   BackgroundImages.data(context).length - 1) {
-                                // pushNamedAndRemoveUntil(Routes.loginPage);
+                                context.pushNamedAndRemoveUntil(
+                                  Routes.loginscreen,
+                                  predicate: (route) => false,
+                                );
                                 HelperMethods.setFirstTime();
                               } else {
                                 controller?.animateToPage(

@@ -15,10 +15,18 @@
   "siginwithphoneandpassword":"قم بتسجيل الدخول بالتليفون والباسوورد او اكمل التجسيل بالسوشيال ميديا",
   "enteryourphonenumber":"قم بأدخال رقم الهاتف",
   "enteryourpassword":"قم بأدخال الرقم السري",
+  "enteryouremail":"قم بأدخال بريدك الالكتروني",
   "rememberme":"تذكرني",
   "forgotpassword":"نسيت كلمة المرور",
   "donthavaeanaccount":"لا تمتلك حساب ؟",
   "signup":"انشاء حساب",
+  "wewillsendyouthenewpassowrd":"سنرسل اليك كلمة المرور الجديدة",
+  "pleaseenteryouremail":"من فضلك ادخل الايميل الخاص بك",
+  "send":"ارسل",
+  "newpasswordsuccessfullysentcheckyourinbox":"تم ارسال كلمةالمرور الجديدة \n تفقد صندوق بريدك",
+  "failedtosendnewpassword":"لم يتم ارسال كلمة المرور الجديدة",
+
+
 
 
 

@@ -17,9 +17,14 @@
   "siginwithphoneandpassword":"Sign in with phone and password or continue with social media",
   "enteryourphonenumber":"Enter your phone number",
   "enteryourpassword":"Enter your password",
+  "enteryouremail":"Enter your email",
   "rememberme":"Remember me",
   "forgotpassword":"Forgot Password",
   "donthavaeanaccount":"Don't have an account?",
-  "signup":"Sign Up"
-
+  "signup":"Sign Up",
+  "wewillsendyouthenewpassowrd":"We will send you the new passowrd",
+  "pleaseenteryouremail":"Please enter your email",
+  "send":"Send",
+  "newpasswordsuccessfullysentcheckyourinbox":"New password successfully sent \nCheck your inbox",
+  "failedtosendnewpassword":"Failed to send new password"
 }
