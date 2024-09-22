@@ -41,6 +41,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   fontSize: 20.sp,
                   label: LocaleKeys.wewillsendyouthenewpassowrd.tr(),
                 ),
+                5.height,
                 HintMediumText(
                   fontSize: 18.h,
                   label: LocaleKeys.pleaseenteryouremail.tr(),
