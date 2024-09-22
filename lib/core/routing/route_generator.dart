@@ -2,6 +2,7 @@ import 'package:bud/core/routing/platform_page_route.dart';
 import 'package:bud/core/routing/undefined_route_screen.dart';
 import 'package:bud/src/Auth/Presentation/Forgot_password_Screen.dart';
 import 'package:bud/src/Auth/Presentation/Login_Screen.dart';
+import 'package:bud/src/Auth/Presentation/Register_Screen.dart';
 import 'package:flutter/cupertino.dart';
 import '../../src/on_boarding/presentation/onboarding_screen.dart';
 import 'routes.dart';
@@ -16,6 +17,8 @@ class RouteGenerator {
         return platformPageRoute(LoginScreen());
       case Routes.forgotpassword:
         return platformPageRoute(ForgotPasswordScreen());
+      case Routes.registerscreen:
+        return platformPageRoute(RegisterScreen());
 
       default:
         return platformPageRoute(const UndefinedRouteScreen());

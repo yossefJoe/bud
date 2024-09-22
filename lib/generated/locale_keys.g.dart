@@ -25,6 +25,11 @@ abstract class  LocaleKeys {
   static const send = 'send';
   static const newpasswordsuccessfullysentcheckyourinbox = 'newpasswordsuccessfullysentcheckyourinbox';
   static const failedtosendnewpassword = 'failedtosendnewpassword';
+  static const alreadyhaveanaccount = 'alreadyhaveanaccount';
+  static const confirmpassword = 'confirmpassword';
+  static const enterfirstname = 'enterfirstname';
+  static const enterlastname = 'enterlastname';
+  static const joinus = 'joinus';
   static const en = 'en';
   static const ar = 'ar';
   static const changeLanguage = 'changeLanguage';

@@ -16,23 +16,18 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
+class RegisterScreen extends StatelessWidget {
+  RegisterScreen({super.key});
   GlobalKey<FormState> fromglobalkey = GlobalKey<FormState>();
   TextStyle hintstyle =
       TextStyles.font18CustomGray600Weight.copyWith(color: Colors.grey[350]);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar(
           title: PrimaryRegularText(
-        label: LocaleKeys.signin.tr(),
+        label: LocaleKeys.signup.tr(),
       )),
       body: SingleChildScrollView(
         child: Center(
@@ -41,15 +36,42 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Form(
               key: fromglobalkey,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  PrimaryBoldText(
-                    fontSize: 26.sp,
-                    label: LocaleKeys.welcomeback.tr(),
-                  ),
-                  HintMediumText(
-                    fontSize: 18.h,
+                  PrimaryMediumText(
                     textAlign: TextAlign.center,
-                    label: LocaleKeys.siginwithphoneandpassword.tr(),
+                    fontSize: 20.sp,
+                    label: LocaleKeys.joinus.tr(),
+                  ),
+                  20.height,
+                  CustomTextField(
+                    radius: 30.h,
+                    suffixIcon: Icon(Icons.person),
+                    keyboardType: TextInputType.name,
+                    onChanged: (phonenumber) {},
+                    hintStyle: hintstyle,
+                    hintText: LocaleKeys.enterfirstname.tr(),
+                    colorBorderSide: blackColor,
+                  ),
+                  20.height,
+                  CustomTextField(
+                    radius: 30.h,
+                    suffixIcon: Icon(Icons.person),
+                    keyboardType: TextInputType.name,
+                    onChanged: (phonenumber) {},
+                    hintStyle: hintstyle,
+                    hintText: LocaleKeys.enterlastname.tr(),
+                    colorBorderSide: blackColor,
+                  ),
+                  20.height,
+                  CustomTextField(
+                    radius: 30.h,
+                    keyboardType: TextInputType.emailAddress,
+                    suffixIcon: Icon(Icons.email),
+                    onChanged: (email) {},
+                    hintStyle: hintstyle,
+                    hintText: LocaleKeys.enteryouremail.tr(),
+                    colorBorderSide: blackColor,
                   ),
                   20.height,
                   CustomTextField(
@@ -64,36 +86,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   20.height,
                   CustomTextField(
                     radius: 30.h,
-                    suffixIcon: Icon(Icons.lock),
                     onChanged: (password) {},
                     hintStyle: hintstyle,
                     isPassword: true,
                     hintText: LocaleKeys.enteryourpassword.tr(),
                     colorBorderSide: blackColor,
                   ),
-                  10.height,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      CustomCheckbox(
-                        title: LocaleKeys.rememberme.tr(),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          context.pushNamed(Routes.forgotpassword);
-                        },
-                        child: PrimaryRegularText(
-                          labelStyle: TextStyles.font16Black500Weight
-                              .copyWith(decoration: TextDecoration.underline),
-                          label: LocaleKeys.forgotpassword.tr(),
-                        ),
-                      )
-                    ],
+                  CustomTextField(
+                    radius: 30.h,
+                    onChanged: (password) {},
+                    hintStyle: hintstyle,
+                    isPassword: true,
+                    hintText: LocaleKeys.confirmpassword.tr(),
+                    colorBorderSide: blackColor,
                   ),
                   10.height,
                   customButton(
                       borderRadius: 20.h,
-                      buttonText: LocaleKeys.signin.tr(),
+                      buttonText: LocaleKeys.signup.tr(),
                       buttonColor: primaryColor,
                       buttonFunc: () {
                         if (fromglobalkey.currentState!.validate()) {
@@ -104,27 +114,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                       buttonWidth: 400.w,
                       buttonTextColor: whiteColor),
-                  10.height,
-                  AppCircularIconButton(
-                    onPressed: () {},
-                    icon: AppIcons.googlelogo,
-                    backgroundColor: grayScaleColor,
-                  ),
                   20.height,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       PrimaryRegularText(
-                        label: LocaleKeys.donthavaeanaccount.tr(),
+                        label: LocaleKeys.alreadyhaveanaccount.tr(),
                       ),
                       5.width,
                       LabelButton(
                         onTap: () {
-                          context.pushNamed(Routes.registerscreen);
+                          context.pushNamed(Routes.loginscreen);
                         },
                         style: TextStyles.font16Black500Weight
                             .copyWith(color: primaryColor),
-                        title: LocaleKeys.signup.tr(),
+                        title: LocaleKeys.signin.tr(),
                       )
                     ],
                   ),

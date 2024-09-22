@@ -26,5 +26,10 @@
   "pleaseenteryouremail":"Please enter your email",
   "send":"Send",
   "newpasswordsuccessfullysentcheckyourinbox":"New password successfully sent \nCheck your inbox",
-  "failedtosendnewpassword":"Failed to send new password"
+  "failedtosendnewpassword":"Failed to send new password",
+  "alreadyhaveanaccount":"Already have an account ?",
+  "confirmpassword":"Confirm password",
+  "enterfirstname":"Enter your first name",
+  "enterlastname":"Enter your last name",
+  "joinus":"Join us and have a unique experience"
 }
