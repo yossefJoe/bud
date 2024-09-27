@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          context.pushNamed(Routes.forgotpassword);
+                          context.pushNamed(Routes.forgotpasswordscreen);
                         },
                         child: PrimaryRegularText(
                           labelStyle: TextStyles.font16Black500Weight
@@ -97,6 +97,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       buttonColor: primaryColor,
                       buttonFunc: () {
                         if (fromglobalkey.currentState!.validate()) {
+                          context.pushNamed(Routes.profilescreen);
+
                           print('valid');
                         } else {
                           print('not valid');
