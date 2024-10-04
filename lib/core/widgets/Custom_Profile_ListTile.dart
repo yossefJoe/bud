@@ -24,9 +24,10 @@ class ProfileListtile extends StatelessWidget {
         leadingicon,
         color: AppColors.primaryColor,
       ),
+      //
       trailing: Icon(
         Icons.arrow_forward_ios,
-        
+
         color: AppColors.greyColor.withOpacity(0.4),
       ),
       title: PrimaryBoldText(
